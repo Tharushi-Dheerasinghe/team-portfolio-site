@@ -1,0 +1,282 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #252538;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+section {
+    padding: 45px 8%;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    color: #51258d;
+    margin-bottom: 25px;
+    font-size: 23px;
+}
+
+
+.hero {
+    min-height: 300px;
+    background: linear-gradient(
+        120deg,
+        #f1eaff,
+        #ffffff
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #252538;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #777789;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background-color: #51258d;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #381667;
+}
+
+.about {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background-color: #ffffff;
+    border: 1px solid #e8e5ed;
+    border-radius: 9px;
+    padding: 25px 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+}
+
+.about-card h3 {
+    color: #51258d;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: #777789;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.team {
+    background-color: #f3effb;
+    text-align: center;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border: 1px solid #e8e5ed;
+    border-radius: 9px;
+    padding: 25px 12px;
+    text-align: center;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(81, 37, 141, 0.12);
+}
+
+.member-circle {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-color: #51258d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.team-card h3 {
+    color: #51258d;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.team-card p {
+    color: #777789;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+.contact {
+    background-color: #ffffff;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    color: #252538;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dedee6;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #252538;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #51258d;
+    box-shadow: 0 0 0 2px rgba(81, 37, 141, 0.1);
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 5px;
+}
+
+/* Form success message */
+
+.success-message {
+    color: #218838;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 35px 5%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .about-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 250px;
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .about-container,
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card,
+    .team-card {
+        padding: 22px 15px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
